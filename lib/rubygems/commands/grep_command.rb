@@ -29,4 +29,9 @@ class Gem::Commands::GrepCommand < Gem::Command
       exec('grep', *options[:build_args], '-R', ui.outs.string.strip)
     end
   end
+
+  def exec *args
+    say(args.join(' '))
+    super
+  end
 end
