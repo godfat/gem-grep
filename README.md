@@ -11,9 +11,8 @@ by Lin Jen-Shin ([godfat](http://godfat.org))
 
 grep the gem for a given name or grep the file for a given require path.
 
-Also checkout [gem-cd][], [gem-eit][].
+Also checkout [gem-eit][].
 
-[gem-cd]: https://github.com/godfat/gem-cd
 [gem-eit]: https://github.com/godfat/gem-eit
 
 ## REQUIREMENTS:
