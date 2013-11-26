@@ -26,7 +26,7 @@ class Gem::Commands::GrepCommand < Gem::Command
       alert_error('No pattern specified')
       terminate_interaction(1)
     else
-      exec('grep', *options[:build_args], '-R', ui.outs.string.strip)
+      exec('grep', *options[:build_args], '-nR', ui.outs.string.strip)
     end
   end
 
