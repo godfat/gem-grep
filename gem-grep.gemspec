@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
-# stub: gem-grep 0.5.1 ruby lib
+# stub: gem-grep 0.6.0 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "gem-grep"
-  s.version = "0.5.1"
+  s.version = "0.6.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Lin Jen-Shin (godfat)"]
-  s.date = "2013-11-22"
+  s.date = "2013-11-26"
   s.description = "grep the gem for a given name or grep the file for a given require path.\n\nAlso checkout [gem-eit][].\n\n[gem-eit]: https://github.com/godfat/gem-eit"
   s.email = ["godfat (XD) godfat.org"]
   s.files = [
