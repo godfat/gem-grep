@@ -33,10 +33,11 @@ By default it would pick `grep` if nothing is set. However we recommend
 
 Use `--` to pass arguments to `$GEM_GREP`, such as `--color`, `-E`, or `-A`.
 
-Also checkout [gem.fish][] for fish completion.
+Also checkout [gem.fish][] for [fish][] completion.
 
 [ag]: https://github.com/ggreer/the_silver_searcher
 [gem.fish]: https://github.com/godfat/dev-tool/blob/master/.config/fish/completions/gem.fish
+[fish]: http://fishshell.com/
 
 ### grep gem
 
