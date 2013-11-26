@@ -19,7 +19,7 @@ Also checkout [gem-eit][].
 
 * Tested with MRI (official CRuby) 1.9.3, 2.0.0, Rubinius and JRuby.
 * [gem-path](https://github.com/godfat/gem-path)
-* grep from shell
+* `grep` from shell, or set `GEM_GREP` to `ag` or whatever command you want.
 
 ## INSTALLATION:
 
@@ -27,36 +27,42 @@ Also checkout [gem-eit][].
 
 ## SYNOPSIS:
 
-Use `--` to pass arguments to `grep`, such as `--color`, `-E`, or `-A`.
+Please set either `$GEM_GREP` to the command you want to search sources.
+By default it would pick `grep` if nothing is set. However we recommend
+[ag][] if you have it installed.
+
+Use `--` to pass arguments to `$GEM_GREP`, such as `--color`, `-E`, or `-A`.
+
+[ag]: https://github.com/ggreer/the_silver_searcher
 
 ### grep gem
 
     gem grep rib -- 'def test'
-    # grep 'def test' -R ~/.gem/ruby/2.0.0/gems/rib-1.0.0
+    # grep 'def test' -nR ~/.gem/ruby/2.0.0/gems/rib-1.0.0
 
     gem grep rib -- -E 'def \w{4}\b' -A 3 --color
-    # grep -E 'def \w{4}\b' -A 3 --color -R ~/.gem/ruby/2.0.0/gems/rib-1.0.0
+    # grep -E 'def \w{4}\b' -A 3 --color -nR ~/.gem/ruby/2.0.0/gems/rib-1.0.0
 
 ### grep gem with specific version
 
     gem grep rib '<1' -- 'def test'
-    # grep 'def test' -R ~/.gem/ruby/2.0.0/gems/rib-0.9.9
+    # grep 'def test' -nR ~/.gem/ruby/2.0.0/gems/rib-0.9.9
 
     gem grep rib '~>0.8.2' -- 'def test'
-    # grep 'def test' -R ~/.gem/ruby/2.0.0/gems/rib-0.8.9
+    # grep 'def test' -nR ~/.gem/ruby/2.0.0/gems/rib-0.8.9
 
     gem grep rib 0.1.0 -- 'def test'
-    # grep 'def test' -R ~/.gem/ruby/2.0.0/gems/rib-0.1.0
+    # grep 'def test' -nR ~/.gem/ruby/2.0.0/gems/rib-0.1.0
 
 ### grep gem from a require path
 
     gem grep rib/config -- 'def test'
-    # grep 'def test' -R ~/.gem/ruby/2.0.0/gems/rib-1.0.0
+    # grep 'def test' -nR ~/.gem/ruby/2.0.0/gems/rib-1.0.0
 
 ### grep a file from a require path
 
     gem grep timeout -- class
-    # grep class -R /usr/lib/ruby/2.0.0/timeout.rb
+    # grep class -nR /usr/lib/ruby/2.0.0/timeout.rb
 
 ## CONTRIBUTORS:
 
