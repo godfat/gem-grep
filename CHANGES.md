@@ -1,5 +1,10 @@
 # CHANGES
 
+## gem-grep 0.6.2 -- 2014-03-24
+
+* Introduce method `grep_command` to make gem-grep more modular and therefore
+  make gem-bgrep easier to reuse codes in gem-grep.
+
 ## gem-grep 0.6.1 -- 2014-03-24
 
 * Fixed gem command description.
