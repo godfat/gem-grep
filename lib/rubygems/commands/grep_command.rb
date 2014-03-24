@@ -1,13 +1,13 @@
 
 require 'stringio'
 
-class CapturedUI < Gem::StreamUI
-  def initialize
-    super($stdin, StringIO.new, $stderr, false)
-  end
-end
-
 class Gem::Commands::GrepCommand < Gem::Command
+  class CapturedUI < Gem::StreamUI
+    def initialize
+      super($stdin, StringIO.new, $stderr, false)
+    end
+  end
+
   def description
     'Grep the gem for a given name or grep the file for a given require path'
   end
