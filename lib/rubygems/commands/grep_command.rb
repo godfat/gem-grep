@@ -17,25 +17,33 @@ class Gem::Commands::GrepCommand < Gem::Command
   end
 
   def execute
-    ui = CapturedUI.new
-    Gem::DefaultUserInteraction.use_ui(ui) do
-      Gem::GemRunner.new.run(['path'] + options[:args])
-    end
-
     if options[:build_args].empty?
       alert_error('No pattern specified')
       terminate_interaction(1)
-    else
-      exec(grep, *options[:build_args], '-nR', ui.outs.string.strip)
     end
+
+    exec(*grep_command(options[:args], options[:build_args]))
+  end
+
+  def grep_command path_args, grep_args
+    [grep_name, *grep_args, '-nR', capture_path(*path_args)]
+  end
+
+  private
+  def capture_path *path_args
+    ui = CapturedUI.new
+    Gem::DefaultUserInteraction.use_ui(ui) do
+      Gem::GemRunner.new.run(['path', *path_args])
+    end
+    ui.outs.string.strip
+  end
+
+  def grep_name
+    ENV['GEM_GREP'] || 'grep'
   end
 
   def exec *args
     say(args.join(' '))
     super
-  end
-
-  def grep
-    ENV['GEM_GREP'] || 'grep'
   end
 end
