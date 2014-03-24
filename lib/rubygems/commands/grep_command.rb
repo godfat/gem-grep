@@ -9,7 +9,7 @@ end
 
 class Gem::Commands::GrepCommand < Gem::Command
   def description
-    'Edit the gem for a given name or edit the file for a given require path'
+    'Grep the gem for a given name or grep the file for a given require path'
   end
 
   def initialize
