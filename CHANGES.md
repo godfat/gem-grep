@@ -1,5 +1,10 @@
 # CHANGES
 
+## gem-grep 0.6.1 -- 2014-03-24
+
+* Fixed gem command description.
+* Moved CapturedUI under Gem::Commands::GrepCommand.
+
 ## gem-grep 0.6.0 -- 2013-11-26
 
 * Accept `$GEM_GREP` for the grep command. Recommend [ag][].
