@@ -26,7 +26,7 @@ class Gem::Commands::GrepCommand < Gem::Command
   end
 
   def grep_command path_args, grep_args
-    [grep_name, *grep_args, '-nR', capture_path(*path_args)]
+    [grep_name, *grep_args, *grep_default_args, capture_path(*path_args)]
   end
 
   private
@@ -39,11 +39,31 @@ class Gem::Commands::GrepCommand < Gem::Command
   end
 
   def grep_name
-    ENV['GEM_GREP'] || 'grep'
+    @grep_name ||= ENV['GEM_GREP'] || 'grep'
   end
 
-  def exec *args
-    say(args.join(' '))
+  def grep_default_args
+    case grep_name
+    when 'rg'
+      []
+    else
+      ['-nR']
+    end
+  end
+
+  def exec cmd, *args
+    quoted_args = args.map(&method(:quote))
+    say("#{cmd} #{quoted_args.join(' ')}")
     super
+  end
+
+  def quote arg
+    escaped = arg.gsub('\\', '\\\\\\').gsub("'", '\'').gsub('"', '\\"')
+
+    if escaped.include?(' ')
+      "'#{escaped}'"
+    else
+      escaped
+    end
   end
 end
