@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib".freeze]
   s.authors = ["Lin Jen-Shin (godfat)".freeze]
-  s.date = "2017-07-28"
+  s.date = "2017-07-29"
   s.description = "grep the gem for a given name or grep the file for a given require path.\n\nAlso checkout [gem-eit][].\n\n[gem-eit]: https://github.com/godfat/gem-eit".freeze
   s.email = ["godfat (XD) godfat.org".freeze]
   s.files = [

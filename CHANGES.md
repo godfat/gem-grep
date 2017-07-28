@@ -1,8 +1,8 @@
 # CHANGES
 
-## gem-grep 0.7.0 -- 2017-07-28
+## gem-grep 0.7.0 -- 2017-07-29
 
-* Support ripgrep (rg)
+* Support and recommend ripgrep (rg)
 * Try to show the command more faithfully by quoting and escaping arguments
 
 ## gem-grep 0.6.2 -- 2014-03-24
