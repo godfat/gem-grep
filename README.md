@@ -19,8 +19,9 @@ Also checkout [gem-eit][].
 
 * Tested with MRI (official CRuby), Rubinius and JRuby.
 * [gem-path](https://github.com/godfat/gem-path)
-* `grep` from shell, or set `$GEM_GREP` to `ag` (The Silver Searcher),
-  `rg` (ripgrep) or other compatible command.
+* `grep` from shell, or set `$GEM_GREP` to `ag` ([The Silver Searcher][ag]),
+  `rg` ([ripgrep][rg]) or other compatible command.
+* [rg][] is recommended.
 
 ## INSTALLATION:
 
@@ -36,6 +37,7 @@ Use `--` to pass arguments to `$GEM_GREP`, such as `--color`, `-E`, or `-A`.
 
 Also checkout [gem.fish][] for [fish][] completion.
 
+[ag]: https://github.com/ggreer/the_silver_searcher
 [rg]: https://github.com/BurntSushi/ripgrep
 [gem.fish]: https://github.com/godfat/dev-tool/blob/master/.config/fish/completions/gem.fish
 [fish]: http://fishshell.com/
