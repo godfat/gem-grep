@@ -1,5 +1,12 @@
 # CHANGES
 
+## gem-grep 0.8.0 -- 2017-09-11
+
+* Update signature of `grep_command` and `capture_path`.
+  Reverse for `grep_command` so that it's easier to extend for
+  `gem-bgrep`. Since this changed a public API, a major version
+  bump is needed.
+
 ## gem-grep 0.7.0 -- 2017-07-29
 
 * Support and recommend ripgrep (rg)
