@@ -79,7 +79,7 @@ Also checkout [gem.fish][] for [fish][] completion.
 
 Apache License 2.0 (Apache-2.0)
 
-Copyright (c) 2013-2017, Lin Jen-Shin (godfat)
+Copyright (c) 2013-2018, Lin Jen-Shin (godfat)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
