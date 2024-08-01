@@ -8,6 +8,6 @@ end
 
 Gemgem.init(__dir__) do |s|
   s.name    = 'gem-grep'
-  s.version = '0.8.0'
+  s.version = '1.0.0'
   s.add_runtime_dependency('gem-path')
 end

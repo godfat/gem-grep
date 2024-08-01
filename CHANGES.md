@@ -1,5 +1,9 @@
 # CHANGES
 
+## gem-grep 1.0.0 -- 2024-08-01
+
+* Fixed for newer RubyGems
+
 ## gem-grep 0.8.0 -- 2017-09-11
 
 * Update signature of `grep_command` and `capture_path`.
