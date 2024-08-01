@@ -34,7 +34,7 @@ class Gem::Commands::GrepCommand < Gem::Command
   def capture_path path_args
     ui = CapturedUI.new
     Gem::DefaultUserInteraction.use_ui(ui) do
-      Gem::GemRunner.new.run(['path', *path_args])
+      Gem::GemRunner.new.run(['path', *path_args.map(&:to_s)])
     end
     ui.outs.string.strip
   end
